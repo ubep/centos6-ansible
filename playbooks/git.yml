@@ -1,0 +1,13 @@
+---
+
+- hosts: vms
+
+  tasks:
+
+   - include: tasks/install-git.yml
+
+
+
+  vars_files:
+
+  - config.yml

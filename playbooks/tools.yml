@@ -1,0 +1,7 @@
+---
+
+- hosts: vms
+
+  tasks:
+
+   - include: tasks/install-unix-tools.yml

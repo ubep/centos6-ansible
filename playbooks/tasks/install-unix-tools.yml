@@ -1,0 +1,13 @@
+---
+
+- name: install tree
+  yum: name=tree
+
+- name: install tmux
+  yum: name=tmux
+
+- name: install pip
+  yum: name=python-pip
+
+- name: install httpie
+  pip: name=httpie
