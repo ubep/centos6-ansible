@@ -1,0 +1,7 @@
+---
+
+- hosts: vms
+
+  tasks:
+
+   - include: tasks/configure-iptables.yml
