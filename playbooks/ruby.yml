@@ -1,0 +1,10 @@
+---
+
+- hosts: vms
+
+  vars:
+    rubyversion: "2.3.1"
+
+  tasks:
+
+   - include: tasks/install-ruby.yml

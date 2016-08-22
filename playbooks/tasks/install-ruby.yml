@@ -1,0 +1,30 @@
+---
+
+- name: install dependencies
+  yum:
+    name={{item}}
+  with_items:
+    - gcc-c++
+    - patch
+    - readline
+    - readline-devel
+    - zlib
+    - zlib-devel
+    - libyaml-devel
+    - libffi-devel
+    - openssl-devel
+    - make
+    - bzip2
+    - autoconf
+    - automake
+    - libtool
+    - bison
+
+- name: install rvm
+  shell: "{{ item }}"
+  with_items:
+# - "gpg2 --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3"
+  - "curl -L get.rvm.io | bash -s stable"
+  - "source /etc/profile.d/rvm.sh"
+# - "rvm install {{ rubyversion }}"
+# installed ruby can be found in /usr/local/rvm/rubies/ruby-[version]/bin
