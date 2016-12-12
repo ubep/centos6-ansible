@@ -1,9 +1,5 @@
 ---
 
-- name: install git
-  yum: name=git
-
-
 
 - fail: msg='Please configure the config.yml first!'
   when: not SSH_PASSWORD or not GITHUB_USER or not GITHUB_PASSWORD
